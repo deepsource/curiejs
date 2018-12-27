@@ -1,5 +1,5 @@
 # curie.js
-!()[https://travis-ci.org/deepsource/version-master.svg?branch=master]
+![](https://travis-ci.org/deepsource/version-master.svg?branch=master)
 
 With `curie.js` you can handle [curie links](https://www.w3.org/TR/curie/curie-diff.html) provided by [hypermedia](https://en.wikipedia.org/wiki/Hypermedia) (e.g. [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS)) APIs.
 
