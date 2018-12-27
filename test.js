@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import Curie from './curie.js';
+import Curie from './index.js';
 import Chai from 'chai';
 
 describe('Curie.js', function () {

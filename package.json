@@ -1,5 +1,5 @@
 {
-  "name": "curie.js",
+  "name": "curiejs",
   "version": "1.0.2",
   "description": "Library to handle curie links provided by hypermedia APIs.",
   "main": "curie.js",
