@@ -1,5 +1,5 @@
 # curiejs
-![](https://travis-ci.org/deepsource/version-master.svg?branch=master)
+![](https://travis-ci.org/deepsource/curiejs.svg?branch=master)
 
 With `curiejs` you can handle [curie links](https://www.w3.org/TR/curie/curie-diff.html) provided by [hypermedia](https://en.wikipedia.org/wiki/Hypermedia) (e.g. [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS)) APIs.
 
@@ -21,7 +21,7 @@ You can use `curiejs` in your `javascript` projects:
 
     new Curie(link, params).toUri(); 
     // --> 'http://localhost:4000/api/entity?page=1&projection=detail'
-``` 
+```
 
 ## License
 
