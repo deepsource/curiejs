@@ -1,7 +1,7 @@
 {
   "name": "curie.js",
-  "version": "1.0.1",
-  "description": "Library to handle curie links provided by hypermedia apis.",
+  "version": "1.0.2",
+  "description": "Library to handle curie links provided by hypermedia APIs.",
   "main": "curie.js",
   "scripts": {
     "start": "npm run build && node dist/curie.js",

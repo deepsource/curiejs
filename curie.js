@@ -41,6 +41,10 @@ class Curie {
         this.parameters = parameters || {};
     }
 
+    /**
+     * Constructs URI from provided link and parameters.
+     * If no parameters defined a sanitized URI will be returned.
+     */
     toUri() {
         assert(this.link, 'Link must be provided!');
 
@@ -56,11 +60,17 @@ class Curie {
         return this.sanitize() + '?' + processedParams.join('&');
     }
 
+    /**
+     * Sanitizes the given link by removing curies.
+     */
     sanitize() {
         assert(this.link, 'Link must be provided!');
         return this.link.replace(this.REGEX_MATCHER_CURIE_PARAMS, '');
     }
 
+    /**
+     * Returns an array of all available curie paramter names.
+     */
     getParameters() {
         assert(this.link, 'Link must be provided!');
         const matches = this.REGEX_MATCHER_CURIE_PARAMS.exec(this.link);
