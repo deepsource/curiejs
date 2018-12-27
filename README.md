@@ -3,6 +3,14 @@
 
 With `curiejs` you can handle [curie links](https://www.w3.org/TR/curie/curie-diff.html) provided by [hypermedia](https://en.wikipedia.org/wiki/Hypermedia) (e.g. [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS)) APIs.
 
+## Install
+
+You can install `curiejs` with `npm`:
+
+```shell
+    npm install curiejs --save
+```
+
 ## Usage
 
 You can use `curiejs` in your `javascript` projects:
