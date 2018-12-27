@@ -1,0 +1,33 @@
+{
+  "name": "curie",
+  "version": "1.0.0",
+  "description": "Library to handle curie links provided by hypermedia apis.",
+  "main": "curie.js",
+  "scripts": {
+    "start": "npm run build && node dist/curie.js",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "test": "npm run build && mocha dist/test.js"
+  },
+  "keywords": [
+    "curie",
+    "curies",
+    "hypermedia",
+    "hateoas",
+    "hal",
+    "links",
+    "spring-data-rest",
+    "spring",
+    "spring-hateoas"
+  ],
+  "author": "Sebastian Ullrich (https://deepsource.de)",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "rimraf": "^2.6.2",
+    "should": "^13.2.3"
+  }
+}
