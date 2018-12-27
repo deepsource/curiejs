@@ -28,14 +28,15 @@ class Curie {
 
     /**
      * Default constructor that accepts the curie link and parameters.
-     * @param {*} link curie link
-     * @param {*} parameters paramters to attach to curie link
+     * @param {string} link curie link
+     * @param {object} parameters paramters to attach to curie link
      */
     constructor(link, parameters) {
         this.REGEX_MATCHER_CURIE_PARAMS = /\{\?(.+)\}/;
         this.REGEX_MATCHER_PARAM_SPIT = /\s*\,\s*/;
 
-        assert(link, 'Link must be provided!');
+        assert(link, 'You must provide at least one string as link!')
+        assert(typeof link == 'string', 'Link must be provided as string!');
 
         this.link = link;
         this.parameters = parameters || {};
@@ -46,7 +47,7 @@ class Curie {
      * If no parameters defined a sanitized URI will be returned.
      */
     toUri() {
-        assert(this.link, 'Link must be provided!');
+        assert(typeof this.link === 'string', 'You must provide at least one string as link!');
 
         if (Object.getOwnPropertyNames(this.parameters).length === 0) {
             // No paramerters provided, return sanitized link
@@ -64,7 +65,7 @@ class Curie {
      * Sanitizes the given link by removing curies.
      */
     sanitize() {
-        assert(this.link, 'Link must be provided!');
+        assert(typeof this.link === 'string', 'You must provide at least one string as link!');
         return this.link.replace(this.REGEX_MATCHER_CURIE_PARAMS, '');
     }
 
@@ -72,7 +73,7 @@ class Curie {
      * Returns an array of all available curie paramter names.
      */
     getParameters() {
-        assert(this.link, 'Link must be provided!');
+        assert(typeof this.link === 'string', 'You must provide at least one string as link!');
         const matches = this.REGEX_MATCHER_CURIE_PARAMS.exec(this.link);
         if (!matches || !matches[1]) return [];
         return matches[1].split(this.REGEX_MATCHER_PARAM_SPIT);

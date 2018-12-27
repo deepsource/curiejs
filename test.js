@@ -37,7 +37,7 @@ describe('Curie.js', function () {
     });
 
     it('should throw exception on empty initalize', function () {
-        Chai.expect(() => new Curie()).to.throw('Link must be provided!');
+        Chai.expect(() => new Curie()).to.throw('You must provide at least one string as link!');
     });
 
     it('should initalize with no parameter', function () {
@@ -70,6 +70,10 @@ describe('Curie.js', function () {
         const curie = new Curie(link, parameters);
 
         Chai.expect(curie.toUri()).to.be.equal('http://localhost:4000/api/entity?page=1&size=20&projection=detail');
+    });
+
+    it('should only accept link as string', function () {
+        Chai.expect(() => new Curie({})).to.throw('Link must be provided as string!');
     });
 
     it('should ignore unknown parameters', function () {
