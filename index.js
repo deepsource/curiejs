@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import assert from 'assert';
+const assert = require('assert');
 
 class Curie {
 
@@ -80,4 +80,4 @@ class Curie {
     }
 }
 
-export default Curie;
+module.exports = Curie;
